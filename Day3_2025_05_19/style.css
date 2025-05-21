@@ -114,7 +114,7 @@ body {
     background-color: rgba(255,255,255,0.2);
 }
 .container1 {
-    width: 850px;
+    width: 700px;
     background: #fff;
     border-radius: 10px;
     display: flex;
@@ -136,13 +136,13 @@ body {
 }
 .form1-section h2 {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 28px;
     color:#111
 }
 .form1-section input {
     border: none;
     border-bottom: 1px solid #ccc;
-    padding: 15px 0;
+    padding: 10px 0px;
     margin-bottom: 25px;
     width: 100%;
     font-size: 20px;
@@ -177,16 +177,17 @@ body {
     text-align: center;
     padding: 30px;
     border-radius: 10px;
-    background:rgba(0,0,0,0.3);
 }
 h2 {
     text-align: center;
 }
-.image1-section h2 {
-    font-size: 25px;
+.image1-section h3 {
+    color: white;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .image1-section p {
+    color: white;
     font-size: 15px;
     margin-bottom: 100px;
 }
