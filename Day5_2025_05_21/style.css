@@ -1,0 +1,32 @@
+.calculator {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 20px auto;
+    width: max-content;
+    display:grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 5px;
+}
+.button {
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 0;
+    font-size: 20px;
+    border: 1px solid #999;
+}
+.display {
+    grid-column: span 4;
+    background-color: #fff;
+    padding: 25px;
+    text-align: right;
+    font-size: 25px;
+    margin-bottom: 5px;
+    border: 1px solid #999;
+}
+.operator {
+    background-color: gold;
+}
+.function {
+    background-color: gold;
+}
