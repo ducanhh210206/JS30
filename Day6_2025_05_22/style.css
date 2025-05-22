@@ -1,0 +1,165 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.top-bar {
+  background-color: #d93025;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.top-bar .links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.top-bar .social-icon img {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Logo and banner */
+.logo-banner {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  justify-content: space-between;
+}
+
+.logo-banner .logo {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo-banner .red {
+  color: #d93025;
+}
+
+.logo-banner .banner {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.logo-banner strong {
+  font-weight: 700;
+}
+
+.logo-banner small {
+  display: block;
+  margin-top: 5px;
+  color: #777;
+}
+
+.logo-banner button {
+  margin-top: 10px;
+  background-color: #d93025;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.main-nav {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  margin-right: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.main-nav a:hover,
+.main-nav .active a {
+  color: #d93025;
+}
+
+.search-icon {
+  color: white;
+  cursor: pointer;
+}
+
+.featured {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.post {
+  flex: 1;
+  position: relative;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.tag.blue {
+  background-color: #3b82f6;
+  
+}
+
+.tag.purple {
+  background-color: #a855f7;
+}
+
+.tag.green {
+  background-color: #22c55e;
+}
+
+.post h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 14px;
+  color: #ddd;
+}
