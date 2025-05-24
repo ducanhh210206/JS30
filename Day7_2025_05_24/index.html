@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display"></div>
+        
+        <div class="button">1</div>
+        <div class="button">2</div>
+        <div class="button">3</div>
+        <div class="button operator">+</div>
+        
+        <div class="button">4</div>
+        <div class="button">5</div>
+        <div class="button">6</div>
+        <div class="button operator">-</div>
+
+        <div class="button">7</div>
+        <div class="button">8</div>
+        <div class="button">9</div>
+        <div class="button operator">x</div>
+
+        <div class="button function">C</div>
+        <div class="button function">0</div>
+        <div class="button function">=</div>
+        <div class="button operator">/</div>
+    </div>
+    <script>
+    (function() {
+        const display = document.getElementById('display');
+        const buttons = document.querySelectorAll('.button');
+        let expression = '';
+        let justEvaluated = false;
+
+        function updateDisplay(value) {
+            display.textContent = value;
+        }
+
+        function isOperator(char) {
+            return ['+', '-', '*', '/'].includes(char);
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.getAttribute('data-value');
+
+            if (button.id === 'clear') {
+                expression = '';
+                updateDisplay('0');
+                justEvaluated = false;
+                return;
+            }
+
+            if (button.id === 'equals') {
+                if (expression === '') return;
+                try {
+                if (isOperator(expression[expression.length - 1])) {
+                    expression = expression.slice(0, -1);
+                }
+                const result = Function('"use strict";return (' + expression + ')')();
+                expression = String(result);
+                updateDisplay(expression);
+                justEvaluated = true;
+                } catch(e) {
+                updateDisplay('Error');
+                expression = '';
+                justEvaluated = false;
+                }
+                return;
+            }
+            if (justEvaluated) {
+                if (!isOperator(value)) {
+                    expression = '';
+                }
+                justEvaluated = false;
+            }
+            if (isOperator(value)) {
+                if (expression === '') {
+                if (value !== '-') return;
+                } else {
+                    const lastChar = expression[expression.length -1];
+                if (isOperator(lastChar)) {
+                    expression = expression.slice(0, -1);
+                    }
+                }
+            }
+            expression += value;
+            updateDisplay(expression);
+            });
+        });
+    })();
+    </script>
+</body> 
+</html>
