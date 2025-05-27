@@ -1,0 +1,13 @@
+{
+    "manifest_vesion": 3,
+    "name": "Change DanTri Title",
+    "version": "1.1",
+    "description": "Cho phép thay đổi tiêu đề báo Dân Trí theo ý muốn",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+        {
+            "matches": ["*://dantri.com.vn/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
