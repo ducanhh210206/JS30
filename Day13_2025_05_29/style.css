@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f8;
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+.form-container {
+    background: #fff;
+    padding: 20px;
+    margin: 0 auto 25px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.form-container button {
+    width: 100px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #32a86d;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding: 5px 10px;
+}
+th {
+    background-color: #d1d6ce;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+td button {
+    padding: 6px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+td button:hover {
+    background-color: #c0392b;
+}
+@media screen and (max-width: 600px) {
+    .form-container, table {
+        width: 100%;
+    }
+}

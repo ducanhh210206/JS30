@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sinh viên vào danh sách</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h2>Thêm sinh viên vào danh sách</h2>
+    <div class="form-container">
+        <input id="maSV" type="text" placeholder="Mã sinh viên">
+        <input id="hoTen" type="text" placeholder="Họ tên">
+        <input id="email" type="text" placeholder="Email">
+        <input id="soDT" type="text" placeholder="Số điện thoại">
+        <button onclick="themSinhVien()">Thêm</button>
+    </div>
+    <table id="bangSinhVien">
+        <thead>
+        <tr>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>SĐT</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
