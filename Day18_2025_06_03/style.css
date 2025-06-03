@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #DDDDDD;
+}
+button {
+    padding: 5px 10px;
+    margin: 2px;
+    background-color: #DDDDDD;
+    border-radius: 3px;
+}
+input {
+    border-radius: 3px;
+}
+.edit {background-color: yellow; }
+.delete {background-color: red; color: white; }
