@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+    
+.sidebar {
+    background-color: #2f2a25;
+    color: #fff;
+    width: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    
+.sidebar h1 {
+    font-size: 24px;
+    text-align: center;
+    font-family: cursive;
+}
+    
+.menu {
+    list-style: none;
+    margin-top: 30px;
+}
+    
+.menu li {
+    margin: 20px 0;
+    font-weight: 600;
+    color: #d2b48c;
+}
+    
+.menu li.active {
+    color: #fff;
+    text-decoration: underline;
+}
+    
+.main {
+    flex: 1;
+    display: flex;
+}
+    
+.center {
+    background: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4') center/cover no-repeat;
+    width: 40%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+    
+.center h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+    
+.center p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+    
+.center button {
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+    
+.right {
+    background-color: #f7f7f7;
+    width: 60%;
+    padding: 40px;
+    overflow-y: auto;
+}
+    
+.right ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+    
+.accordion-item {
+    border-bottom: 2px solid #b8966b;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #b8966b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.accordion-item .title {
+    flex: 1;
+}
+    
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-weight: normal;
+    color: #333;
+    padding-left: 20px;
+}
+    
+.accordion-item.active .accordion-content {
+    max-height: 500px;
+    margin-top: 10px;
+}
+    
+.accordion-toggle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #000;
+}

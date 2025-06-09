@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Booking | Charlotte Café</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Charlotte<br>Café</div>
+            <nav class="nav">
+                <a href="#home">HOME</a>
+                <a href="#menu">MENU</a>
+                <a href="#about">ABOUT</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#features">FEATURES</a>
+                <a href="#blog">BLOG</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </aside>
+
+        <section class="main">
+            <div class="booking-left">
+                <h2>BOOK<br>A TABLE</h2>
+                <p>Etiam vitae tempus lorem. Interdum et malesuada<br>fames ac ante ipsum primis in faucibus. Sed id<br>egestas mi.</p>
+            </div>
+
+            <div class="booking-right">
+                <h2>BOOK A TABLE ONLINE</h2>
+                <form>
+                    <label>Date of event</label>
+                    <select id="day"></select>
+                    <select id="month"></select>
+                    <select id="year"></select>
+
+                    <label>Time of event</label>
+                    <select id="time"></select>
+
+                    <label>Session</label>
+                    <select id="session">
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                    </select>
+                    
+                    <label>Number of guests</label>
+                    <input type="number" name="guests">
+
+                    <label>First name</label>
+                    <input type="text" name="first_name">
+
+                    <label>Last name</label>
+                    <input type="text" name="last_name">
+
+                    <label>Email address</label>
+                    <input type="email" name="email">
+
+                    <label>Phone number</label>
+                    <input type="tel" name="phone">
+
+                    <label>Special requests</label>
+                    <textarea name="requests"></textarea>
+
+                    <button type="submit">MAKING BOOKING</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const daySelect = document.getElementById("day");
+        for (let i = 1; i <= 31; i++) {
+            daySelect.innerHTML += `<option>${String(i).padStart(2, '0')}</option>`;
+        }  
+
+        const month = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+        ];
+        const monthSelect = document.getElementById("month");
+        months.forEach(m => {
+            monthSelect.innerHTML += `<option>${m}</option>`;
+        });
+        
+        const yearSelect = document.getElementById("year");
+        for (let y = 2025; y <= 2027; y++) {
+            yearSelect.innerHTML += `<option>${y}</option>`;
+        }
+
+        const timeSelect = document.getElementById("time");
+        for (let h = 6; h <= 18; h++) {
+            const hour = h % 12 === 0 ? 12 : h % 12;
+            const suffix = h < 12 ? "am" : "pm";
+            timeSelect.innerHTML += `<option>${String(hour).padStart(2, '0')}:00 ${suffix}</option>`;
+        }
+    </script>
+</body>
+</html>
